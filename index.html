@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-column">
+            <div class="hotel-info">
+                <h2>Hotel Information</h2>
+                <p>Welcome to our hotel! Here you can find all the information about our rooms and facilities.</p>
+            </div>
+            <div class="room-gallery">
+                <h3>Room Gallery</h3>
+                <div class="image-grid">
+                    <img src="01.jpg" alt="Room Image 1" class="room-image" onclick="openModal(this)">
+                    <img src="02.jpg" alt="Room Image 2" class="room-image" onclick="openModal(this)">
+                    <img src="03.jpg" alt="Room Image 3" class="room-image" onclick="openModal(this)">
+                    <img src="04.jpg" alt="Room Image 4" class="room-image" onclick="openModal(this)">
+                    <img src="05.jpg" alt="Room Image 5" class="room-image" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="booking-form">
+                <h2>Check-In Calendar</h2>
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button class="calendar-nav-btn" onclick="prevMonth()">&#10094;</button>
+                        <span id="month-year"></span>
+                        <button class="calendar-nav-btn" onclick="nextMonth()">&#10095;</button>
+                    </div>
+                    <div class="calendar-body">
+                        <!-- Динамически создаваемый календарь -->
+                    </div>
+                </div>
+                <div class="date-selection">
+                    <button class="date-btn">Exact dates</button>
+                    <button class="date-btn">+1 day</button>
+                    <button class="date-btn">+2 days</button>
+                    <button class="date-btn">+3 days</button>
+                    <button class="date-btn">+7 days</button>
+                </div>
+                <button class="continue-btn">Continue to Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для изображения -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+</body>
+</html>
